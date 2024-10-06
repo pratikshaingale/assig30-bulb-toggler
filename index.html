@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulb-toggler</title>
+    <style>
+body{
+            background-color: rgb(100, 217, 121);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-color: rgb(21, 2, 73);
+            border-radius: 10px;
+            
+        
+        
+        }
+        .button-container{
+            width: 95px;
+            border-color: black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: italic;
+            border-radius: 10px 10px 10px 10px;
+            font-size: 25px;
+            color: rgb(2, 2, 61);
+            background-color: rgb(22, 6, 241);
+            display:flex;
+            flex-direction: row;
+        
+        }
+        .heading{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-style: italic;
+            color: rgb(12, 12, 93);
+        
+        }
+        
+            </style>
+</head>
+<body>
+    <div class="container">
+        <h1   class="heading">BULB  TOGGLE</h1>
+        <img src="img/off.png" alt="off" id="bulb"   height="400px">
+        <br> <br>
+        <button type="button" onclick="toggleBulb()"    class="button-container">
+            Toggle
+        </button>
+    </div>
+    <script>
+        const bulbElement = document.getElementById('bulb');
+        let state = false;
+
+        function toggleBulb() 
+        {
+            if(state==false)   
+            {
+                bulbElement.src = 'img/on.png';
+                state = true;
+            }  
+            else
+            {
+                bulbElement.src = 'img/off.png';
+                state = false;
+            }
+        }
+    </script>
+</body>
+</html>
